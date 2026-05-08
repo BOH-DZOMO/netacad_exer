@@ -36,7 +36,7 @@ class UrgentTask(Task):
         self.due_date = due_date
 
     @classmethod
-    def from_string(cls, text: str) -> "Task":
+    def from_string(cls, text) -> "Task":
         text = text.split("|")
         if len(text) == 2:
             return cls(text[0],text[1])
